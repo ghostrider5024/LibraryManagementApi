@@ -21,6 +21,9 @@ namespace LibraryManagementApi.Controllers
             _mapper = mapper;
         }
 
+        /// <summary>
+        /// Weather forecast object
+        /// </summary>
         [HttpGet]
         [Route(WebApiEndPoint.Title.GetAllTitles)]
         public async Task<IActionResult> GetAllTitles(int pageNumber = -1, int pageSize = -1)

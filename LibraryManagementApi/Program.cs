@@ -5,6 +5,7 @@ using LibraryManagementApi.Service;
 using LibraryManagementApi.Service.IService;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +27,8 @@ builder.Services.AddSwaggerGen(opt =>
         Type = SecuritySchemeType.ApiKey
     });
     opt.OperationFilter<SecurityRequirementsOperationFilter>();
+    opt.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory,
+        $"{Assembly.GetExecutingAssembly().GetName().Name}.xml"));
 });
 builder.Services.AddCors(options => options.AddDefaultPolicy(policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
 builder.Services.AddDbContext<DataContext>();
