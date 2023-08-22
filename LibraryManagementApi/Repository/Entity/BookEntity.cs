@@ -18,7 +18,7 @@ namespace LibraryManagementApi.Repository.Entity
         public string? Position { get; set; }
 
 
-        [StringLength(10)]
+        [StringLength(36)]
         public string TitleBookId { get; set; }
 
         public virtual TitleEntity? Title { get; set; }

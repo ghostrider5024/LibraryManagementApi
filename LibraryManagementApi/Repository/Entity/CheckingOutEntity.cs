@@ -6,15 +6,15 @@ namespace LibraryManagementApi.Repository.Entity
     [Table("CheckingOut")]
     public class CheckingOutEntity : Entity
     {
-        [StringLength(10)]
+        [StringLength(36)]
         public string LibraryCardId { get; set; }
 
-        [StringLength(10)]
+        [StringLength(36)]
         public string LibrarianId { get; set; }
 
         public DateTimeOffset? BorrowingDate { get; set; }
 
-        [StringLength(10)]
+        [StringLength(36)]
         public string InvoiceId { get; set; }
 
         public ICollection<DetailBorrowingBookEntity> DetailBorrowingBooks { get; set; }

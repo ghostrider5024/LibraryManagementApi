@@ -6,10 +6,10 @@ namespace LibraryManagementApi.Repository.Entity
     [Table("BookAuthor")]
     public class BookAuthorEntity : EntityWithoutKey
     {
-        [StringLength(10)]
+        [StringLength(36)]
         public string TitleBookId { get; set; }
 
-        [StringLength(10)]
+        [StringLength(36)]
         public string AuthorId { get; set; }
 
         [StringLength(20)]

@@ -34,7 +34,7 @@ namespace LibraryManagementApi.Repository.Entity
         [StringLength(200)]
         public string? Image { get; set; }
 
-        [StringLength(10)]
+        [StringLength(36)]
         public string RoleId { get; set; }
 
         public virtual RoleEntity? Role { get; set; }

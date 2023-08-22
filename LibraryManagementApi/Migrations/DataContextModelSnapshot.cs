@@ -25,8 +25,8 @@ namespace LibraryManagementApi.Migrations
             modelBuilder.Entity("LibraryManagementApi.Repository.Entity.AuthorEntity", b =>
                 {
                     b.Property<string>("Id")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<DateTimeOffset?>("Birthday")
                         .HasColumnType("datetimeoffset");
@@ -58,12 +58,12 @@ namespace LibraryManagementApi.Migrations
             modelBuilder.Entity("LibraryManagementApi.Repository.Entity.BookAuthorEntity", b =>
                 {
                     b.Property<string>("TitleBookId")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<string>("AuthorId")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<DateTimeOffset?>("DeleteDate")
                         .HasColumnType("datetimeoffset");
@@ -83,8 +83,8 @@ namespace LibraryManagementApi.Migrations
             modelBuilder.Entity("LibraryManagementApi.Repository.Entity.BookEntity", b =>
                 {
                     b.Property<string>("Id")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<string>("BorrowStatus")
                         .IsRequired()
@@ -105,8 +105,8 @@ namespace LibraryManagementApi.Migrations
 
                     b.Property<string>("TitleBookId")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.HasKey("Id");
 
@@ -118,12 +118,12 @@ namespace LibraryManagementApi.Migrations
             modelBuilder.Entity("LibraryManagementApi.Repository.Entity.BookGenreEntity", b =>
                 {
                     b.Property<string>("TitleBookId")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<string>("GenreId")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<DateTimeOffset?>("DeleteDate")
                         .HasColumnType("datetimeoffset");
@@ -138,8 +138,8 @@ namespace LibraryManagementApi.Migrations
             modelBuilder.Entity("LibraryManagementApi.Repository.Entity.CheckingOutEntity", b =>
                 {
                     b.Property<string>("Id")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<DateTimeOffset?>("BorrowingDate")
                         .HasColumnType("datetimeoffset");
@@ -149,18 +149,18 @@ namespace LibraryManagementApi.Migrations
 
                     b.Property<string>("InvoiceId")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<string>("LibrarianId")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<string>("LibraryCardId")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.HasKey("Id");
 
@@ -176,12 +176,12 @@ namespace LibraryManagementApi.Migrations
             modelBuilder.Entity("LibraryManagementApi.Repository.Entity.DetailBorrowingBookEntity", b =>
                 {
                     b.Property<string>("BookId")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<string>("BorrowingId")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<string>("BorrowStatus")
                         .IsRequired()
@@ -209,8 +209,8 @@ namespace LibraryManagementApi.Migrations
             modelBuilder.Entity("LibraryManagementApi.Repository.Entity.GenreEntity", b =>
                 {
                     b.Property<string>("Id")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<DateTimeOffset?>("DeleteDate")
                         .HasColumnType("datetimeoffset");
@@ -233,8 +233,8 @@ namespace LibraryManagementApi.Migrations
             modelBuilder.Entity("LibraryManagementApi.Repository.Entity.InvoiceEntity", b =>
                 {
                     b.Property<string>("Id")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<DateTimeOffset?>("DeleteDate")
                         .HasColumnType("datetimeoffset");
@@ -267,8 +267,8 @@ namespace LibraryManagementApi.Migrations
             modelBuilder.Entity("LibraryManagementApi.Repository.Entity.LibrarianEntity", b =>
                 {
                     b.Property<string>("Id")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<string>("Address")
                         .HasMaxLength(200)
@@ -311,8 +311,8 @@ namespace LibraryManagementApi.Migrations
 
                     b.Property<string>("RoleId")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.HasKey("Id");
 
@@ -324,8 +324,8 @@ namespace LibraryManagementApi.Migrations
             modelBuilder.Entity("LibraryManagementApi.Repository.Entity.LibraryCardEntity", b =>
                 {
                     b.Property<string>("Id")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<string>("Address")
                         .HasMaxLength(200)
@@ -373,8 +373,8 @@ namespace LibraryManagementApi.Migrations
 
                     b.Property<string>("RoleId")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.HasKey("Id");
 
@@ -386,8 +386,8 @@ namespace LibraryManagementApi.Migrations
             modelBuilder.Entity("LibraryManagementApi.Repository.Entity.PublisherEntity", b =>
                 {
                     b.Property<string>("Id")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<string>("Address")
                         .HasMaxLength(200)
@@ -418,8 +418,8 @@ namespace LibraryManagementApi.Migrations
             modelBuilder.Entity("LibraryManagementApi.Repository.Entity.RoleEntity", b =>
                 {
                     b.Property<string>("Id")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<DateTimeOffset?>("DeleteDate")
                         .HasColumnType("datetimeoffset");
@@ -436,8 +436,8 @@ namespace LibraryManagementApi.Migrations
             modelBuilder.Entity("LibraryManagementApi.Repository.Entity.TitleEntity", b =>
                 {
                     b.Property<string>("Id")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<DateTimeOffset?>("DeleteDate")
                         .HasColumnType("datetimeoffset");
@@ -460,8 +460,8 @@ namespace LibraryManagementApi.Migrations
 
                     b.Property<string>("PublisherId")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<int?>("PublishingYear")
                         .HasColumnType("int");

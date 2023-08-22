@@ -13,7 +13,7 @@ namespace LibraryManagementApi.Migrations
                 name: "Author",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
                     Name = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
                     Birthday = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
@@ -30,7 +30,7 @@ namespace LibraryManagementApi.Migrations
                 name: "Genre",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
                     Name = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     DeleteDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true)
@@ -44,7 +44,7 @@ namespace LibraryManagementApi.Migrations
                 name: "Invoice",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
                     Name = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     InvoiceDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
@@ -61,7 +61,7 @@ namespace LibraryManagementApi.Migrations
                 name: "Publisher",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
                     Name = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
                     Address = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
@@ -77,7 +77,7 @@ namespace LibraryManagementApi.Migrations
                 name: "Role",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
                     DeleteDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true)
                 },
@@ -90,14 +90,14 @@ namespace LibraryManagementApi.Migrations
                 name: "Title",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
                     Title = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     PublishingYear = table.Column<int>(type: "int", nullable: true),
                     Image = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
                     Gages = table.Column<int>(type: "int", nullable: true),
                     Language = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
-                    PublisherId = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    PublisherId = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
                     DeleteDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true)
                 },
                 constraints: table =>
@@ -115,7 +115,7 @@ namespace LibraryManagementApi.Migrations
                 name: "Librarian",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
                     Name = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
                     Password = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
@@ -124,7 +124,7 @@ namespace LibraryManagementApi.Migrations
                     Phone = table.Column<string>(type: "nvarchar(11)", maxLength: 11, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     Image = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
-                    RoleId = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    RoleId = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
                     DeleteDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true)
                 },
                 constraints: table =>
@@ -142,7 +142,7 @@ namespace LibraryManagementApi.Migrations
                 name: "LibraryCard",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
                     Name = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
                     Password = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
@@ -153,7 +153,7 @@ namespace LibraryManagementApi.Migrations
                     Image = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
                     RegistrationDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
                     ExpirationDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
-                    RoleId = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    RoleId = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
                     DeleteDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true)
                 },
                 constraints: table =>
@@ -171,11 +171,11 @@ namespace LibraryManagementApi.Migrations
                 name: "Book",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
                     Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     BorrowStatus = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     Position = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
-                    TitleBookId = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    TitleBookId = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
                     DeleteDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true)
                 },
                 constraints: table =>
@@ -193,8 +193,8 @@ namespace LibraryManagementApi.Migrations
                 name: "BookAuthor",
                 columns: table => new
                 {
-                    TitleBookId = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
-                    AuthorId = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    TitleBookId = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
+                    AuthorId = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
                     Role = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     DeleteDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true)
                 },
@@ -219,8 +219,8 @@ namespace LibraryManagementApi.Migrations
                 name: "BookGenre",
                 columns: table => new
                 {
-                    TitleBookId = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
-                    GenreId = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    TitleBookId = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
+                    GenreId = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
                     DeleteDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true)
                 },
                 constraints: table =>
@@ -244,11 +244,11 @@ namespace LibraryManagementApi.Migrations
                 name: "CheckingOut",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
-                    LibraryCardId = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
-                    LibrarianId = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
+                    LibraryCardId = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
+                    LibrarianId = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
                     BorrowingDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
-                    InvoiceId = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    InvoiceId = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
                     DeleteDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true)
                 },
                 constraints: table =>
@@ -278,8 +278,8 @@ namespace LibraryManagementApi.Migrations
                 name: "DetailBorrowingBook",
                 columns: table => new
                 {
-                    BorrowingId = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
-                    BookId = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    BorrowingId = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
+                    BookId = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
                     ReturnDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
                     BorrowStatus = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),

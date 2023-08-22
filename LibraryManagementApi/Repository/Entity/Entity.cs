@@ -5,7 +5,7 @@ namespace LibraryManagementApi.Repository.Entity
     public class Entity : EntityWithoutKey
     {
         [Key]
-        [StringLength(10)]
+        [StringLength(36)]
         public string Id { get; set; }
     }
 

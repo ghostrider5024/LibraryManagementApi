@@ -39,7 +39,7 @@ namespace LibraryManagementApi.Repository.Entity
 
         public DateTimeOffset? ExpirationDate { get; set; }
 
-        [StringLength(10)]
+        [StringLength(36)]
         public string RoleId { get; set; }
 
         public virtual RoleEntity? Role { get; set; }

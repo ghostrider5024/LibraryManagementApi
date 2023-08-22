@@ -6,10 +6,10 @@ namespace LibraryManagementApi.Repository.Entity
     [Table("BookGenre")]
     public class BookGenreEntity : EntityWithoutKey
     {
-        [StringLength(10)]
+        [StringLength(36)]
         public string TitleBookId { get; set; }
        
-        [StringLength(10)]
+        [StringLength(36)]
         public string GenreId { get; set; }
 
         public virtual TitleEntity? Title { get; set; }

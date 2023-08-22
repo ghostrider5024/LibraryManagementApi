@@ -6,10 +6,10 @@ namespace LibraryManagementApi.Repository.Entity
     [Table("DetailBorrowingBook")]
     public class DetailBorrowingBookEntity : EntityWithoutKey
     {
-        [StringLength(10)]
+        [StringLength(36)]
         public string BorrowingId { get; set; }
 
-        [StringLength(10)]
+        [StringLength(36)]
         public string BookId { get; set; }
 
         public DateTimeOffset? ReturnDate { get; set; }

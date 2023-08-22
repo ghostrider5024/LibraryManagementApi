@@ -23,7 +23,7 @@ namespace LibraryManagementApi.Repository.Entity
         [StringLength(50)]
         public string? Language { get; set; }
 
-        [StringLength(10)]
+        [StringLength(36)]
         public string PublisherId { get; set; }
         public virtual PublisherEntity? Publisher { get; set; }
 
